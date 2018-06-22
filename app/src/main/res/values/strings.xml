@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">可萌记账</string>
+    <string name="splash_text">一切随心记，万物皆可萌</string>
+    <string name="splash_designer">2018 Designed By Salu</string>
+    <string name="cellphone">手机号</string>
+    <string name="password">密码</string>
+    <string name="login">登录</string>
+    <string name="forget_password">忘记密码?</string>
+    <string name="go_to_register"><![CDATA[注册 >]]></string>
+    <string name="cell_not_null">手机号不能为空</string>
+    <string name="pwd_not_null">密码不能为空</string>
+    <string name="cell_format">亲，手机号格式有误</string>
+    <string name="go_to_login"><![CDATA[< 登录]]></string>
+    <string name="cell_prefix">+86</string>
+    <string name="input_cellphone">输入手机号</string>
+    <string name="verify_code">验证码</string>
+    <string name="input_password">6-18位登录密码 (不含**字符)</string>
+    <string name="register">注册</string>
+    <string name="please_input_cellphone">请输入手机号</string>
+    <string name="please_input_verify_code">请输入验证码</string>
+    <string name="please_input_pwd">请输入登录密码</string>
+    <string name="user_contract">《用户契约》</string>
+    <string name="register_and_apply">注册表示你已阅读同意</string>
+    <string name="need_apply">需要同意用户契约</string>
+    <string name="submit">提交</string>
+    <string name="cell_can_not_use">手机号不可用?</string>
+    <string name="find_back_pwd">找回密码</string>
+    <string name="get_verify_code">获取验证码</string>
+</resources>

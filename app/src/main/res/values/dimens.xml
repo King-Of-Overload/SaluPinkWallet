@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="default_corner_radius">10dp</dimen>
+    <dimen name="login_reg_margin">29dp</dimen>
+    <dimen name="default_et_padding">19dp</dimen>
+
+
+    <dimen name="login_button_height">66dp</dimen>
+    <dimen name="login_button_width">280dp</dimen>
+    <dimen name="default_title_btn_margin_top">18dp</dimen>
+    <dimen name="default_title_btn_margin_start_end">12dp</dimen>
+    <dimen name="common_edittext_height">58dp</dimen>
+</resources>
