@@ -20,7 +20,8 @@
         <activity android:name=".module.home.HomeActivity" />
         <activity android:name=".module.common.LoginActivity" />
         <activity android:name=".module.common.RegisterActivity" />
-        <activity android:name=".module.common.ForgetPwdActivity"></activity>
+        <activity android:name=".module.common.ForgetPwdActivity" />
+        <activity android:name=".module.guide.CharacterActivity"></activity>
     </application>
 
 </manifest>

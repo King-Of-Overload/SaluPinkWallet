@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    tools:context=".module.guide.CharacterActivity">
+
+    <TextView
+        android:id="@+id/tv_jump"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/jump"
+        android:layout_gravity="end"
+        android:textColor="@color/white"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginRight="23dp"
+        android:textSize="@dimen/default_small_text_size"
+        android:background="@drawable/character_jump_textview"
+        android:gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <!--@start 选择角色-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/click_choose_character"
+                android:textColor="@color/white"
+                android:textSize="28sp"
+                android:layout_marginBottom="13dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dingzhi"
+                android:textColor="@color/white"
+                android:textSize="@dimen/default_medium_text_size"
+                android:textStyle="bold"/>
+        </LinearLayout>
+        <!--@end 选择角色-->
+
+        <!--@start 角色区-->
+
+            <FrameLayout
+                android:id="@+id/fl_high_school"
+                android:layout_marginLeft="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+                <RelativeLayout
+                    android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/iv_right_high_school"
+                        android:layout_marginLeft="-30dp"
+                        android:layout_toRightOf="@id/ib_left_high_school"
+                        android:layout_toEndOf="@id/ib_left_high_school"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/character_high_hint" />
+                    <ImageButton
+                        android:id="@+id/ib_left_high_school"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/character_high_school"
+                        android:background="@null"
+                        />
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/character_circle_bg"
+                        android:background="@null"
+                        />
+
+                </RelativeLayout>
+            </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_college"
+            android:layout_marginRight="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginLeft="74dp"
+            android:layout_marginStart="74dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <RelativeLayout
+                android:gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_left_college"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/character_college_hint" />
+                <ImageButton
+                    android:layout_marginStart="-30dp"
+                    android:layout_marginLeft="-30dp"
+                    android:layout_toRightOf="@id/iv_left_college"
+                    android:layout_toEndOf="@id/iv_left_college"
+                    android:id="@+id/ib_right_college"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/character_college"
+                    android:background="@null"
+                    />
+                <ImageButton
+                    android:layout_marginStart="-30dp"
+                    android:layout_marginLeft="-30dp"
+                    android:layout_toRightOf="@id/iv_left_college"
+                    android:layout_toEndOf="@id/iv_left_college"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/character_circle_bg"
+                    android:background="@null"
+                    />
+
+            </RelativeLayout>
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:id="@+id/fl_social"
+            android:layout_marginLeft="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <RelativeLayout
+                android:gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_left_social"
+                    android:layout_marginLeft="-30dp"
+                    android:layout_marginStart="-30dp"
+                    android:layout_toRightOf="@id/ib_right_social"
+                    android:layout_toEndOf="@id/ib_right_social"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/character_social_hint" />
+                <ImageButton
+                    android:id="@+id/ib_right_social"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/character_social"
+                    android:background="@null"
+                    />
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/character_circle_bg"
+                    android:background="@null"
+                    />
+
+            </RelativeLayout>
+        </FrameLayout>
+
+        <!--@end 角色区-->
+    </LinearLayout>
+</LinearLayout>

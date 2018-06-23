@@ -7,6 +7,8 @@ import com.nostra13.universalimageloader.cache.memory.impl.LruMemoryCache;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.utils.StorageUtils;
+import com.zjut.alan.pinkwallet.constants.WalletConstant;
+import com.zjut.alan.saluandroid.tools.data.SaluPreferenceTool;
 
 import java.io.File;
 
@@ -18,6 +20,9 @@ public class PinkWalletApp extends Application {
         super.onCreate();
         mInstance = this;
         init();
+        SaluPreferenceTool.putString(WalletConstant.PREFERENCE_CELLPHONE, "");
+        SaluPreferenceTool.putString(WalletConstant.PREFERENCE_PASSWORD, "");
+        SaluPreferenceTool.putBoolean(WalletConstant.PREFERENCE_FIRST_LOGIN, true);
     }
 
 

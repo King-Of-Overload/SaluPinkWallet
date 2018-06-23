@@ -13,8 +13,11 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import com.zjut.alan.pinkwallet.R;
+import com.zjut.alan.pinkwallet.constants.WalletConstant;
+import com.zjut.alan.pinkwallet.module.guide.CharacterActivity;
 import com.zjut.alan.pinkwallet.tools.interpolator.SpringScaleInterpolator;
 import com.zjut.alan.saluandroid.base.SaluRxBaseActivity;
+import com.zjut.alan.saluandroid.tools.data.SaluPreferenceTool;
 import com.zjut.alan.saluandroid.tools.data.SaluRegexTool;
 import com.zjut.alan.saluandroid.tools.view.SaluStatusBarHelper;
 import com.zjut.alan.saluandroid.tools.view.SaluToastTool;
@@ -144,6 +147,9 @@ public class LoginActivity extends SaluRxBaseActivity {
         passwordET.setText("");
     }
 
+    /**
+     * 登录按钮
+     */
     @OnClick(R.id.btn_login)
     public void loginBtnClick(){
         set.start();//开始动画
@@ -159,6 +165,7 @@ public class LoginActivity extends SaluRxBaseActivity {
         }
         finishTask();
     }
+
 
     /**
      * 注册按钮
@@ -179,7 +186,25 @@ public class LoginActivity extends SaluRxBaseActivity {
 
     @Override
     public void finishTask() {
+        //模拟登录
+        String cellphone = "15861376658";
+        String password = "alanzjut";
+        if(cellphoneET.getText().toString().equals(cellphone) &&
+                passwordET.getText().toString().equals(password)){
+            //存入shared preference
+            SaluPreferenceTool.putString(WalletConstant.PREFERENCE_CELLPHONE, cellphone);
+            SaluPreferenceTool.putString(WalletConstant.PREFERENCE_PASSWORD, password);
+            //跳转
+            if(SaluPreferenceTool.retrieveBoolean(WalletConstant.PREFERENCE_FIRST_LOGIN, true)){
+                CharacterActivity.launch(this);
+            }else{
+                //:TODO:进入主页
 
+            }
+
+        }else{
+            SaluToastTool.displayShortToast(reference.get(), getString(R.string.info_error));
+        }
     }
 
     @Override
